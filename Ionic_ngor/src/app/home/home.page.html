@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Consultation
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+       <ion-card no-padding>
+        <p>Veuillez saisir le numero de la facture</p>
+        <form #loginForm="ngForm" novalidate>
+            <ion-item>
+              <ion-input [(ngModel)]="numero" name="abonne" type="number"  placeholder="Numero facture"></ion-input>
+            </ion-item>
+           <ion-button id="btnAfficher" ion-button (click)="onConsult(loginForm)" color="secondary">Consulter</ion-button>
+        </form>
+          <ion-card-header>
+             <p style="margin-left:-9px;"> Details Facture  </p>
+          </ion-card-header>
+
+          <ion-card-content no-padding>
+            <ion-grid>
+              <ion-row>
+                <ion-col col col-1 style="font-size: 10px">
+                  ID
+                </ion-col>
+                <ion-col col col-2 style="font-size: 10px">
+                      Mois
+                </ion-col>
+                <ion-col style="font-size: 9px;">
+                    Consommation
+                </ion-col>
+                <ion-col style="font-size: 10px ">
+                    Prix
+                </ion-col>
+              </ion-row>
+              </ion-grid>
+              <ion-grid>
+                <ion-row>
+                   <ion-col col col-1  style="font-size:10px;">
+                 {{factures.id}}
+                  </ion-col>
+                 <ion-col col col-2 style="font-size:10px">
+          {{factures.mois}}
+                  </ion-col>
+                   <ion-col style="font-size:10px">
+          {{factures.consommation}}
+                  </ion-col>
+                   <ion-col style="font-size:10px">
+               {{factures.prix}}
+                  </ion-col>
+</ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-card no-padding>
+           <ion-card-content no-padding>
+
+               <ion-grid>
+                  <ion-col col col-1  style="font-size:10px;">
+                  <h1>{{item1}} </h1>
+                   </ion-col>
+
+             </ion-grid>
+           </ion-card-content>
+         </ion-card>
+
+
+ </ion-content>

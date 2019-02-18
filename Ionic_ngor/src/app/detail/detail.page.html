@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Consultation des factures
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+      <ion-button id="btnAfficher" ion-button (click)="getData1()" color="secondary">Afficher</ion-button>
+      <ion-card no-padding>
+          <ion-card-header>
+             <p style="margin-left:-9px;"> last orders buy  </p>
+          </ion-card-header>
+
+          <ion-card-content no-padding>
+            <ion-grid>
+              <ion-row>
+                <ion-col col col-1 style="font-size: 10px">
+                  ID
+                </ion-col>
+                <ion-col col col-2 style="font-size: 10px">
+                      Mois
+                </ion-col>
+                <ion-col style="font-size: 9px;">
+                    Consommation
+                </ion-col>
+                <ion-col style="font-size: 10px ">
+                    Prix
+                </ion-col>
+
+              </ion-row>
+
+
+              </ion-grid>
+
+              <ion-grid>
+
+                    <ion-row  *ngFor="let item of items" >
+
+                   <ion-col col col-1  style="font-size:10px;">
+                 {{item.id}}
+                  </ion-col>
+                 <ion-col col col-2 style="font-size:10px">
+          {{item.mois}}
+                  </ion-col>
+                   <ion-col style="font-size:10px">
+          {{item.consommation}}
+                  </ion-col>
+                   <ion-col style="font-size:10px">
+          {{item.prix}}
+                  </ion-col>
+              </ion-row>
+
+            </ion-grid>
+
+          </ion-card-content>
+        </ion-card>
+</ion-content>
